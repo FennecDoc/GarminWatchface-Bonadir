@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="C:\Projects\Garmin\Bonadir\Bonadir\manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="1" lineNum="6" parent="globals/BonadirView" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirApp.mc" id="2" lineNum="26" parent="globals" pc="268435472" symbol="getApp"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirApp.mc" id="2" lineNum="27" parent="globals" pc="268435482" symbol="getApp"/>
+        <entry filename="c:\\Projects\\Garmin\\Bonadir\\Bonadir\\bin\\gen\\006-B4426-00\\source\\Rez.mcgen" id="3" lineNum="7" parent="globals/Rez" pc="268435493" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirApp.mc" id="4" lineNum="5" parent="globals/BonadirApp" pc="268435513" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="183" parent="globals/BonadirView" pc="268435525" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="184" parent="globals/BonadirView" pc="268435528" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="185" parent="globals/BonadirView" pc="268435537" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="188" parent="globals/BonadirView" pc="268435546" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="189" parent="globals/BonadirView" pc="268435557" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="190" parent="globals/BonadirView" pc="268435564" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="192" parent="globals/BonadirView" pc="268435571" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="194" parent="globals/BonadirView" pc="268435589" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="195" parent="globals/BonadirView" pc="268435611" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="196" parent="globals/BonadirView" pc="268435633" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="197" parent="globals/BonadirView" pc="268435655" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="198" parent="globals/BonadirView" pc="268435677" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="199" parent="globals/BonadirView" pc="268435695" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="200" parent="globals/BonadirView" pc="268435705" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="201" parent="globals/BonadirView" pc="268435727" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="202" parent="globals/BonadirView" pc="268435749" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="203" parent="globals/BonadirView" pc="268435771" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="204" parent="globals/BonadirView" pc="268435793" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="207" parent="globals/BonadirView" pc="268435827" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="208" parent="globals/BonadirView" pc="268435860" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="209" parent="globals/BonadirView" pc="268435876" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="210" parent="globals/BonadirView" pc="268435901" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="212" parent="globals/BonadirView" pc="268435914" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="6" lineNum="217" parent="globals/BonadirView" pc="268436002" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="8" lineNum="26" parent="globals/BonadirView" pc="268436125" symbol="onLayout"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="8" lineNum="27" parent="globals/BonadirView" pc="268436127" symbol="onLayout"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="8" lineNum="28" parent="globals/BonadirView" pc="268436160" symbol="onLayout"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="8" lineNum="29" parent="globals/BonadirView" pc="268436198" symbol="onLayout"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="8" lineNum="32" parent="globals/BonadirView" pc="268436236" symbol="onLayout"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="8" lineNum="34" parent="globals/BonadirView" pc="268436274" symbol="onLayout"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="9" lineNum="160" parent="globals/BonadirView" pc="268436312" symbol="&lt;globals/BonadirView/&lt;&gt;generateHandCoordinates&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="9" lineNum="162" parent="globals/BonadirView" pc="268436315" symbol="&lt;globals/BonadirView/&lt;&gt;generateHandCoordinates&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="9" lineNum="166" parent="globals/BonadirView" pc="268436409" symbol="&lt;globals/BonadirView/&lt;&gt;generateHandCoordinates&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="9" lineNum="167" parent="globals/BonadirView" pc="268436414" symbol="&lt;globals/BonadirView/&lt;&gt;generateHandCoordinates&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="9" lineNum="168" parent="globals/BonadirView" pc="268436430" symbol="&lt;globals/BonadirView/&lt;&gt;generateHandCoordinates&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="9" lineNum="171" parent="globals/BonadirView" pc="268436446" symbol="&lt;globals/BonadirView/&lt;&gt;generateHandCoordinates&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="9" lineNum="172" parent="globals/BonadirView" pc="268436457" symbol="&lt;globals/BonadirView/&lt;&gt;generateHandCoordinates&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="9" lineNum="173" parent="globals/BonadirView" pc="268436487" symbol="&lt;globals/BonadirView/&lt;&gt;generateHandCoordinates&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="9" lineNum="175" parent="globals/BonadirView" pc="268436517" symbol="&lt;globals/BonadirView/&lt;&gt;generateHandCoordinates&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="9" lineNum="178" parent="globals/BonadirView" pc="268436557" symbol="&lt;globals/BonadirView/&lt;&gt;generateHandCoordinates&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="10" lineNum="141" parent="globals/BonadirView" pc="268436560" symbol="&lt;globals/BonadirView/&lt;&gt;drawBackground&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="10" lineNum="145" parent="globals/BonadirView" pc="268436562" symbol="&lt;globals/BonadirView/&lt;&gt;drawBackground&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="10" lineNum="146" parent="globals/BonadirView" pc="268436571" symbol="&lt;globals/BonadirView/&lt;&gt;drawBackground&gt;"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="12" lineNum="19" parent="globals/BonadirView" pc="268436592" symbol="initialize"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="12" lineNum="20" parent="globals/BonadirView" pc="268436594" symbol="initialize"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="12" lineNum="21" parent="globals/BonadirView" pc="268436606" symbol="initialize"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="12" lineNum="22" parent="globals/BonadirView" pc="268436628" symbol="initialize"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="70" parent="globals/BonadirView" pc="268436637" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="84" parent="globals/BonadirView" pc="268436640" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="86" parent="globals/BonadirView" pc="268436652" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="87" parent="globals/BonadirView" pc="268436673" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="88" parent="globals/BonadirView" pc="268436683" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="89" parent="globals/BonadirView" pc="268436696" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="90" parent="globals/BonadirView" pc="268436719" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="91" parent="globals/BonadirView" pc="268436742" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="92" parent="globals/BonadirView" pc="268436762" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="93" parent="globals/BonadirView" pc="268436779" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="94" parent="globals/BonadirView" pc="268436825" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="95" parent="globals/BonadirView" pc="268436871" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="96" parent="globals/BonadirView" pc="268436888" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="98" parent="globals/BonadirView" pc="268436935" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="99" parent="globals/BonadirView" pc="268436944" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="102" parent="globals/BonadirView" pc="268436953" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="103" parent="globals/BonadirView" pc="268436960" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="104" parent="globals/BonadirView" pc="268436966" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="105" parent="globals/BonadirView" pc="268436983" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="106" parent="globals/BonadirView" pc="268437009" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="107" parent="globals/BonadirView" pc="268437040" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="108" parent="globals/BonadirView" pc="268437056" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="109" parent="globals/BonadirView" pc="268437085" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirView.mc" id="14" lineNum="132" parent="globals/BonadirView" pc="268437117" symbol="onUpdate"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirApp.mc" id="15" lineNum="12" parent="globals/BonadirApp" pc="268437159" symbol="onStart"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirApp.mc" id="16" lineNum="20" parent="globals/BonadirApp" pc="268437162" symbol="getInitialView"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirApp.mc" id="16" lineNum="21" parent="globals/BonadirApp" pc="268437164" symbol="getInitialView"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirApp.mc" id="17" lineNum="7" parent="globals/BonadirApp" pc="268437194" symbol="initialize"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirApp.mc" id="17" lineNum="8" parent="globals/BonadirApp" pc="268437196" symbol="initialize"/>
+        <entry filename="C:\\Projects\\Garmin\\Bonadir\\Bonadir\\source\\BonadirApp.mc" id="18" lineNum="16" parent="globals/BonadirApp" pc="268437209" symbol="onStop"/>
+        <entry filename="c:\\Projects\\Garmin\\Bonadir\\Bonadir\\bin\\gen\\006-B4426-00\\source\\Rez.mcgen" id="19" lineNum="21" parent="globals/Rez/Layouts" pc="268437212" symbol="WatchFace"/>
+        <entry filename="c:\\Projects\\Garmin\\Bonadir\\Bonadir\\bin\\gen\\006-B4426-00\\source\\Rez.mcgen" id="19" lineNum="22" parent="globals/Rez/Layouts" pc="268437223" symbol="WatchFace"/>
+        <entry filename="c:\\Projects\\Garmin\\Bonadir\\Bonadir\\bin\\gen\\006-B4426-00\\source\\Rez.mcgen" id="19" lineNum="24" parent="globals/Rez/Layouts" pc="268437288" symbol="WatchFace"/>
+        <entry filename="c:\\Projects\\Garmin\\Bonadir\\Bonadir\\bin\\gen\\006-B4426-00\\source\\Rez.mcgen" id="19" lineNum="26" parent="globals/Rez/Layouts" pc="268437392" symbol="WatchFace"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry field="true" id="18" symbol="hour_hand"/>
+        <entry id="7" object="true" symbol="BonadirApp"/>
+        <entry id="15" method="true" symbol="&lt;globals/BonadirView/&lt;&gt;drawBackground&gt;"/>
+        <entry field="true" id="19" symbol="minute_hand"/>
+        <entry field="true" id="11" symbol="&lt;globals/BonadirView/&lt;&gt;_fullScreenRefresh&gt;"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="16" method="true" symbol="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;"/>
+        <entry field="true" id="25" symbol="AppName"/>
+        <entry id="6" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+        <entry id="8389345" symbol="rezId"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="5" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="8389376" method="true" symbol="onEnterSleep"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry field="true" id="13" symbol="&lt;globals/BonadirView/&lt;&gt;_screenCenterPoint&gt;"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry field="true" id="12" symbol="&lt;globals/BonadirView/&lt;&gt;_offscreenBuffer&gt;"/>
+        <entry id="8389377" method="true" symbol="onExitSleep"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry field="true" id="8392219" symbol="face"/>
+        <entry id="17" method="true" symbol="&lt;globals/BonadirView/&lt;&gt;generateHandCoordinates&gt;"/>
+        <entry field="true" id="24" symbol="id_font_black_diamond"/>
+        <entry field="true" id="10" symbol="&lt;globals/BonadirView/&lt;&gt;_font&gt;"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="22" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry field="true" id="23" symbol="Minute"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="9" symbol="Snitch"/>
+        <entry field="true" id="8389347" symbol="color"/>
+        <entry field="true" id="21" symbol="Hour"/>
+        <entry id="20" module="true" symbol="Layouts"/>
+        <entry id="4" module="true" symbol="globals/Rez/Fonts"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="14" symbol="&lt;globals/BonadirView/&lt;&gt;_screenShape&gt;"/>
+        <entry id="8" object="true" symbol="BonadirView"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268436124" name="dc" stackId="1" startPc="268435525"/>
+        <entry endPc="268436123" name="width" stackId="2" startPc="268435528"/>
+        <entry endPc="268436123" name="height" stackId="3" startPc="268435528"/>
+        <entry endPc="268435823" name="outerRad" stackId="4" startPc="268435557"/>
+        <entry endPc="268435823" name="innerRad" stackId="5" startPc="268435557"/>
+        <entry endPc="268435823" name="i" stackId="6" startPc="268435589"/>
+        <entry endPc="268435810" name="sY" stackId="7" startPc="268435589"/>
+        <entry endPc="268435810" name="eY" stackId="8" startPc="268435589"/>
+        <entry endPc="268435810" name="sX" stackId="9" startPc="268435589"/>
+        <entry endPc="268435810" name="eX" stackId="10" startPc="268435589"/>
+        <entry endPc="268436123" name="coords" stackId="11" startPc="268435827"/>
+        <entry endPc="268436123" name="i" stackId="12" startPc="268435876"/>
+        <entry endPc="268436113" name="dx" stackId="13" startPc="268435876"/>
+        <entry endPc="268436113" name="upperX" stackId="14" startPc="268435876"/>
+        <entry arg="true" endPc="268436311" name="dc" stackId="1" startPc="268436125"/>
+        <entry arg="true" endPc="268436559" name="centerPoint" stackId="1" startPc="268436312"/>
+        <entry arg="true" endPc="268436559" name="angle" stackId="2" startPc="268436312"/>
+        <entry arg="true" endPc="268436559" name="handLength" stackId="3" startPc="268436312"/>
+        <entry arg="true" endPc="268436559" name="tailLength" stackId="4" startPc="268436312"/>
+        <entry arg="true" endPc="268436559" name="width" stackId="5" startPc="268436312"/>
+        <entry endPc="268436559" name="coords" stackId="6" startPc="268436315"/>
+        <entry endPc="268436559" name="result" stackId="7" startPc="268436315"/>
+        <entry endPc="268436559" name="cos" stackId="8" startPc="268436315"/>
+        <entry endPc="268436559" name="sin" stackId="9" startPc="268436315"/>
+        <entry endPc="268436556" name="i" stackId="10" startPc="268436457"/>
+        <entry endPc="268436546" name="x" stackId="11" startPc="268436457"/>
+        <entry endPc="268436546" name="y" stackId="12" startPc="268436457"/>
+        <entry arg="true" endPc="268436591" name="dc" stackId="1" startPc="268436560"/>
+        <entry arg="true" endPc="268437158" name="dc" stackId="1" startPc="268436637"/>
+        <entry endPc="268437157" name="clockTime" stackId="2" startPc="268436640"/>
+        <entry endPc="268437157" name="hourHandAngle" stackId="3" startPc="268436640"/>
+        <entry endPc="268437157" name="minuteHandAngle" stackId="4" startPc="268436640"/>
+        <entry endPc="268437157" name="secondHand" stackId="5" startPc="268436640"/>
+        <entry endPc="268437157" name="width" stackId="6" startPc="268436640"/>
+        <entry endPc="268437157" name="height" stackId="7" startPc="268436640"/>
+        <entry endPc="268437157" name="font" stackId="8" startPc="268436640"/>
+        <entry arg="true" endPc="268437406" name="dc" stackId="1" startPc="268437212"/>
+        <entry endPc="268437406" name="rez_cmp_local_bitmap_face" stackId="2" startPc="268437223"/>
+        <entry endPc="268437406" name="rez_cmp_local_text_TimeLabel" stackId="3" startPc="268437223"/>
+    </localVars>
+    <deviceInfo deviceVersion="7b60046ebc6cbbbfd1a31636a2da0520945bb7b1" partNumber="006-B4426-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="Minute"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="face"/>
+        <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="id_font_black_diamond"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="Hour"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="Snitch"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="67" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/BonadirView" offset="134" parentId="globals" symbolId="BonadirView" type="class"/>
+        <dataEntry label="globals/Rez" offset="340" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/BonadirApp" offset="402" parentId="globals" symbolId="BonadirApp" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="473" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="544" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="579" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="614" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="BonadirView" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435492" name="getApp" startPc="268435472">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435512" name="&lt;init&gt;" parent="Rez" startPc="268435493">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435524" name="&lt;init&gt;" parent="BonadirApp" startPc="268435513">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onExitSleep" parent="BonadirView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268436124" name="&lt;globals/BonadirView/&lt;&gt;drawHashMarks&gt;" parent="BonadirView" startPc="268435525">
+            <param id="dc"/>
+            <documentation><![CDATA[<div class="description"> Draws the clock tick marks around the outside edges of the screen.<br/> <div class="param"> dc Device context</div><br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="BonadirView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436311" name="onLayout" parent="BonadirView" startPc="268436125">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268436559" name="&lt;globals/BonadirView/&lt;&gt;generateHandCoordinates&gt;" parent="BonadirView" startPc="268436312">
+            <param id="centerPoint"/>
+            <param id="angle"/>
+            <param id="handLength"/>
+            <param id="tailLength"/>
+            <param id="width"/>
+            <documentation><![CDATA[<div class="description"> This function is used to generate the coordinates of the 4 corners of the polygon<br/> used to draw a watch hand. The coordinates are generated with specified length,<br/> tail length, and width and rotated around the center point at the provided angle.<br/> 0 degrees is at the 12 o'clock position, and increases in the clockwise direction.<br/> <div class="param"> centerPoint The center of the clock</div><br/> <div class="param"> angle Angle of the hand in radians</div><br/> <div class="param"> handLength The length of the hand from the center to point</div><br/> <div class="param"> tailLength The length of the tail of the hand</div><br/> <div class="param"> width The width of the watch hand</div><br/> <div class="returns">Returns  The coordinates of the watch hand</div><br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268436591" name="&lt;globals/BonadirView/&lt;&gt;drawBackground&gt;" parent="BonadirView" startPc="268436560">
+            <param id="dc"/>
+            <documentation><![CDATA[<div class="description"> Draw the watch face background<br/> onUpdate uses this method to transfer newly rendered Buffered Bitmaps<br/> to the main display.<br/> onPartialUpdate uses this to blank the second hand from the previous<br/> second before outputting the new one.<br/> <div class="param"> dc Device context</div><br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onEnterSleep" parent="BonadirView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436636" name="initialize" parent="BonadirView" startPc="268436592">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="BonadirView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437158" name="onUpdate" parent="BonadirView" startPc="268436637">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Fonts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437161" name="onStart" parent="BonadirApp" startPc="268437159">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437193" name="getInitialView" parent="BonadirApp" startPc="268437162">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437208" name="initialize" parent="BonadirApp" startPc="268437194">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437211" name="onStop" parent="BonadirApp" startPc="268437209">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437406" name="WatchFace" parent="Layouts" startPc="268437212">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

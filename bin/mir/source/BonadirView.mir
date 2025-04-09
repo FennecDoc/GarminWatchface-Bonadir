@@ -1,0 +1,1346 @@
+[ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [System,3,14,20]; ]
+import Toybox.System;
+[ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [WatchUi,4,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 6; @symbol_classdef = [BonadirView,6,6,17]; @symbol_extends<0> = [WatchUi,6,26,33]; @symbol_extends<1> = [WatchFace,6,34,43]; ]
+class BonadirView extends WatchUi.WatchFace {
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 8; @position = 8; @symbol_vardef = [face,8,8,12]; ]
+    var face;
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 9; @position = 8; @symbol_vardef = [Snitch,9,8,14]; ]
+    var Snitch;
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 10; @position = 8; @symbol_vardef = [hour_hand,10,8,17]; ]
+    var hour_hand;
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 11; @position = 8; @symbol_vardef = [minute_hand,11,8,19]; ]
+    var minute_hand;
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 13; @position = 16; @symbol_vardef = [_font,13,16,21]; @symbol_type<0> = [FontResource,13,25,37]; ]
+    private
+    var _font as FontResource or Null;
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 14; @position = 16; @symbol_vardef = [_screenShape,14,16,28]; @symbol_type<0> = [ScreenShape,14,32,43]; ]
+    private
+    var _screenShape as ScreenShape;
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 15; @position = 16; @symbol_vardef = [_screenCenterPoint,15,16,34]; @symbol_type<0> = [Array,15,38,43]; @symbol_type<1> = [Number,15,44,50]; ]
+    private
+    var _screenCenterPoint as Array<Number> or Null;
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 16; @position = 16; @symbol_vardef = [_fullScreenRefresh,16,16,34]; @symbol_type<0> = [Boolean,16,38,45]; ]
+    private
+    var _fullScreenRefresh as Boolean;
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 17; @position = 16; @symbol_vardef = [_offscreenBuffer,17,16,32]; @symbol_type<0> = [BufferedBitmap,17,36,50]; ]
+    private
+    var _offscreenBuffer as BufferedBitmap or Null;
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 19; @symbol_functiondef = [initialize,19,13,23]; ]
+    function initialize() as Void {
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_19_26_23_4_start:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 20 8 ]
+        symbol [ WatchFace %tmp.2 20 8 17 ];
+        %tmp.2 = getv ? :WatchFace;
+        symbol [ initialize %tmp.3 20 18 28 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 21 8 ]
+        symbol [ System %tmp.4 21 23 29 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ getDeviceSettings %tmp.5 21 30 47 ];
+        %tmp.5 = getv function %tmp.4 :getDeviceSettings;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        symbol [ screenShape %tmp.7 21 50 61 ];
+        %tmp.7 = getv %tmp.6 :screenShape;
+        symbol [ _screenShape ? 21 8 20 ];
+        putv self :_screenShape %tmp.7;
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 22 8 ]
+        %tmp.8 = true;
+        symbol [ _fullScreenRefresh ? 22 8 26 ];
+        putv self :_fullScreenRefresh %tmp.8;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_19_26_23_4_stop:
+    }
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 26; @symbol_functiondef = [onLayout,26,13,21]; @symbol_param<0> = [dc,26,22,24]; @symbol_param<0>_type<0> = [Dc,26,28,30]; ]
+    function onLayout(dc as Dc) as Void {
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_26_40_61_4_start:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 27 8 ]
+        %tmp.1 = self;
+        symbol [ setLayout %tmp.2 27 8 17 ];
+        %tmp.2 = getv function %tmp.1 :setLayout;
+        symbol [ Rez %tmp.4 27 18 21 ];
+        %tmp.4 = getv ? :Rez;
+        symbol [ Layouts %tmp.5 27 22 29 ];
+        %tmp.5 = getv %tmp.4 :Layouts;
+        symbol [ WatchFace %tmp.6 27 30 39 ];
+        %tmp.6 = getv function %tmp.5 :WatchFace;
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 27 40 42 ];
+        %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
+        invoke %tmp.1 %tmp.2(%tmp.8);
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 28 8 ]
+        symbol [ WatchUi %tmp.9 28 15 22 ];
+        %tmp.9 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.10 28 23 35 ];
+        %tmp.10 = getv function %tmp.9 :loadResource;
+        symbol [ Rez %tmp.12 28 37 40 ];
+        %tmp.12 = getv ? :Rez;
+        symbol [ Drawables %tmp.13 28 41 50 ];
+        %tmp.13 = getv %tmp.12 :Drawables;
+        symbol [ face %tmp.14 28 51 55 ];
+        %tmp.14 = getv %tmp.13 :face;
+        %tmp.15 = invoke %tmp.9 %tmp.10(%tmp.14);
+        symbol [ face ? 28 8 12 ];
+        putv self :face %tmp.15;
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 29 8 ]
+        symbol [ WatchUi %tmp.16 29 17 24 ];
+        %tmp.16 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.17 29 25 37 ];
+        %tmp.17 = getv function %tmp.16 :loadResource;
+        symbol [ Rez %tmp.19 29 39 42 ];
+        %tmp.19 = getv ? :Rez;
+        symbol [ Drawables %tmp.20 29 43 52 ];
+        %tmp.20 = getv %tmp.19 :Drawables;
+        symbol [ Snitch %tmp.21 29 53 59 ];
+        %tmp.21 = getv %tmp.20 :Snitch;
+        %tmp.22 = invoke %tmp.16 %tmp.17(%tmp.21);
+        symbol [ Snitch ? 29 8 14 ];
+        putv self :Snitch %tmp.22;
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 32 8 ]
+        symbol [ WatchUi %tmp.23 32 16 23 ];
+        %tmp.23 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.24 32 24 36 ];
+        %tmp.24 = getv function %tmp.23 :loadResource;
+        symbol [ $ %tmp.25 32 37 38 ];
+        %tmp.25 = getm $;
+        symbol [ Rez %tmp.26 32 39 42 ];
+        %tmp.26 = getv %tmp.25 :Rez;
+        symbol [ Fonts %tmp.27 32 43 48 ];
+        %tmp.27 = getv %tmp.26 :Fonts;
+        symbol [ id_font_black_diamond %tmp.28 32 49 70 ];
+        %tmp.28 = getv %tmp.27 :id_font_black_diamond;
+        %tmp.29 = invoke %tmp.23 %tmp.24(%tmp.28);
+        %tmp.30 = as %tmp.29 FontResource;
+        symbol [ FontResource %tmp.30 32 75 87 ];
+        symbol [ _font ? 32 8 13 ];
+        putv self :_font %tmp.30;
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 34 8 ]
+        %tmp.31 = newa 2;
+        %tmp.32 = lgetv %dc;
+        symbol [ dc %tmp.32 34 30 32 ];
+        symbol [ getWidth %tmp.33 34 33 41 ];
+        %tmp.33 = getv function %tmp.32 :getWidth;
+        %tmp.34 = invoke %tmp.32 %tmp.33();
+        %tmp.35 = 2;
+        %tmp.36 = div %tmp.34 %tmp.35;
+        %tmp.37 = dup %tmp.31;
+        %tmp.38 = aputv %tmp.37 0 %tmp.36;
+        %tmp.39 = lgetv %dc;
+        symbol [ dc %tmp.39 34 49 51 ];
+        symbol [ getHeight %tmp.40 34 52 61 ];
+        %tmp.40 = getv function %tmp.39 :getHeight;
+        %tmp.41 = invoke %tmp.39 %tmp.40();
+        %tmp.42 = 2;
+        %tmp.43 = div %tmp.41 %tmp.42;
+        %tmp.44 = dup %tmp.38;
+        %tmp.45 = aputv %tmp.44 1 %tmp.43;
+        symbol [ _screenCenterPoint ? 34 8 26 ];
+        putv self :_screenCenterPoint %tmp.45;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_26_40_61_4_stop:
+    }
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 66; @symbol_functiondef = [onShow,66,13,19]; ]
+    function onShow() as Void {
+    }
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 70; @symbol_functiondef = [onUpdate,70,13,21]; @symbol_param<0> = [dc,70,22,24]; @symbol_param<0>_type<0> = [Dc,70,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_70_40_133_4_start:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 84 8 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_70_40_133_4_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_70_40_133_4_stop" ]
+        %clockTime.1 = local;
+        symbol [ clockTime %clockTime.1 84 12 21 ];
+        symbol [ System %tmp.1 84 24 30 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.2 84 31 43 ];
+        %tmp.2 = getv function %tmp.1 :getClockTime;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %clockTime.1 %tmp.3;
+        symbol [ clockTime %clockTime.1 84 12 21 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 86 8 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_70_40_133_4_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_70_40_133_4_stop" ]
+        %hourHandAngle.2 = local;
+        symbol [ hourHandAngle %hourHandAngle.2 86 12 25 ];
+        %tmp.4 = lgetv %clockTime.1;
+        symbol [ clockTime %tmp.4 86 31 40 ];
+        symbol [ hour %tmp.5 86 41 45 ];
+        %tmp.5 = getv %tmp.4 :hour;
+        %tmp.6 = 12;
+        %tmp.7 = mod %tmp.5 %tmp.6;
+        %tmp.8 = 60;
+        %tmp.9 = mul %tmp.7 %tmp.8;
+        %tmp.10 = lgetv %clockTime.1;
+        symbol [ clockTime %tmp.10 86 60 69 ];
+        symbol [ min %tmp.11 86 70 73 ];
+        %tmp.11 = getv %tmp.10 :min;
+        %tmp.12 = add %tmp.9 %tmp.11;
+        lputv %hourHandAngle.2 %tmp.12;
+        symbol [ hourHandAngle %hourHandAngle.2 86 12 25 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 87 8 ]
+        %tmp.13 = lgetv %hourHandAngle.2;
+        symbol [ hourHandAngle %tmp.13 87 24 37 ];
+        %tmp.14 = 12;
+        %tmp.15 = 60.0;
+        %tmp.16 = mul %tmp.14 %tmp.15;
+        %tmp.17 = div %tmp.13 %tmp.16;
+        lputv %hourHandAngle.2 %tmp.17;
+        symbol [ hourHandAngle %hourHandAngle.2 87 8 21 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 88 8 ]
+        %tmp.18 = lgetv %hourHandAngle.2;
+        symbol [ hourHandAngle %tmp.18 88 24 37 ];
+        symbol [ Math %tmp.20 88 40 44 ];
+        %tmp.20 = getv ? :Math;
+        symbol [ PI %tmp.21 88 45 47 ];
+        %tmp.21 = getv %tmp.20 :PI;
+        %tmp.22 = mul %tmp.18 %tmp.21;
+        %tmp.23 = 2;
+        %tmp.24 = mul %tmp.22 %tmp.23;
+        lputv %hourHandAngle.2 %tmp.24;
+        symbol [ hourHandAngle %hourHandAngle.2 88 8 21 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 89 8 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_70_40_133_4_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_70_40_133_4_stop" ]
+        %minuteHandAngle.3 = local;
+        symbol [ minuteHandAngle %minuteHandAngle.3 89 12 27 ];
+        %tmp.25 = lgetv %clockTime.1;
+        symbol [ clockTime %tmp.25 89 31 40 ];
+        symbol [ min %tmp.26 89 41 44 ];
+        %tmp.26 = getv %tmp.25 :min;
+        %tmp.27 = 60.0;
+        %tmp.28 = div %tmp.26 %tmp.27;
+        symbol [ Math %tmp.30 89 55 59 ];
+        %tmp.30 = getv ? :Math;
+        symbol [ PI %tmp.31 89 60 62 ];
+        %tmp.31 = getv %tmp.30 :PI;
+        %tmp.32 = mul %tmp.28 %tmp.31;
+        %tmp.33 = 2;
+        %tmp.34 = mul %tmp.32 %tmp.33;
+        lputv %minuteHandAngle.3 %tmp.34;
+        symbol [ minuteHandAngle %minuteHandAngle.3 89 12 27 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 90 8 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_70_40_133_4_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_70_40_133_4_stop" ]
+        %secondHand.4 = local;
+        symbol [ secondHand %secondHand.4 90 12 22 ];
+        %tmp.35 = lgetv %clockTime.1;
+        symbol [ clockTime %tmp.35 90 26 35 ];
+        symbol [ sec %tmp.36 90 36 39 ];
+        %tmp.36 = getv %tmp.35 :sec;
+        %tmp.37 = 60.0;
+        %tmp.38 = div %tmp.36 %tmp.37;
+        symbol [ Math %tmp.40 90 50 54 ];
+        %tmp.40 = getv ? :Math;
+        symbol [ PI %tmp.41 90 55 57 ];
+        %tmp.41 = getv %tmp.40 :PI;
+        %tmp.42 = mul %tmp.38 %tmp.41;
+        %tmp.43 = 2;
+        %tmp.44 = mul %tmp.42 %tmp.43;
+        lputv %secondHand.4 %tmp.44;
+        symbol [ secondHand %secondHand.4 90 12 22 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 91 8 ]
+        symbol [ View %tmp.46 91 8 12 ];
+        %tmp.46 = getv ? :View;
+        symbol [ onUpdate %tmp.47 91 13 21 ];
+        %tmp.47 = getv function %tmp.46 :onUpdate;
+        %tmp.48 = lgetv %dc;
+        symbol [ dc %tmp.48 91 22 24 ];
+        invoke %tmp.46 %tmp.47(%tmp.48);
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 92 8 ]
+        %tmp.49 = lgetv %dc;
+        symbol [ dc %tmp.49 92 8 10 ];
+        symbol [ setColor %tmp.50 92 11 19 ];
+        %tmp.50 = getv function %tmp.49 :setColor;
+        %tmp.51 = 0xFFD700;
+        symbol [ Graphics %tmp.52 92 30 38 ];
+        %tmp.52 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.53 92 39 56 ];
+        %tmp.53 = getv %tmp.52 :COLOR_TRANSPARENT;
+        invoke %tmp.49 %tmp.50(%tmp.51, %tmp.53);
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 93 8 ]
+        %tmp.54 = lgetv %dc;
+        symbol [ dc %tmp.54 93 8 10 ];
+        symbol [ fillPolygon %tmp.55 93 11 22 ];
+        %tmp.55 = getv function %tmp.54 :fillPolygon;
+        %tmp.56 = self;
+        symbol [ generateHandCoordinates %tmp.57 93 23 46 ];
+        %tmp.57 = getv function %tmp.56 :generateHandCoordinates;
+        symbol [ _screenCenterPoint %tmp.59 93 47 65 ];
+        %tmp.59 = getv ? :_screenCenterPoint;
+        %tmp.60 = lgetv %hourHandAngle.2;
+        symbol [ hourHandAngle %tmp.60 93 67 80 ];
+        %tmp.61 = lgetv %dc;
+        symbol [ dc %tmp.61 93 82 84 ];
+        symbol [ getHeight %tmp.62 93 85 94 ];
+        %tmp.62 = getv function %tmp.61 :getHeight;
+        %tmp.63 = invoke %tmp.61 %tmp.62();
+        %tmp.64 = 6;
+        %tmp.65 = div %tmp.63 %tmp.64;
+        %tmp.66 = 0;
+        %tmp.67 = lgetv %dc;
+        symbol [ dc %tmp.67 93 105 107 ];
+        symbol [ getWidth %tmp.68 93 108 116 ];
+        %tmp.68 = getv function %tmp.67 :getWidth;
+        %tmp.69 = invoke %tmp.67 %tmp.68();
+        %tmp.70 = 80;
+        %tmp.71 = div %tmp.69 %tmp.70;
+        %tmp.72 = invoke %tmp.56 %tmp.57(%tmp.59, %tmp.60, %tmp.65, %tmp.66, %tmp.71);
+        invoke %tmp.54 %tmp.55(%tmp.72);
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 94 8 ]
+        %tmp.73 = lgetv %dc;
+        symbol [ dc %tmp.73 94 8 10 ];
+        symbol [ fillPolygon %tmp.74 94 11 22 ];
+        %tmp.74 = getv function %tmp.73 :fillPolygon;
+        %tmp.75 = self;
+        symbol [ generateHandCoordinates %tmp.76 94 23 46 ];
+        %tmp.76 = getv function %tmp.75 :generateHandCoordinates;
+        symbol [ _screenCenterPoint %tmp.78 94 47 65 ];
+        %tmp.78 = getv ? :_screenCenterPoint;
+        %tmp.79 = lgetv %minuteHandAngle.3;
+        symbol [ minuteHandAngle %tmp.79 94 67 82 ];
+        %tmp.80 = lgetv %dc;
+        symbol [ dc %tmp.80 94 84 86 ];
+        symbol [ getHeight %tmp.81 94 87 96 ];
+        %tmp.81 = getv function %tmp.80 :getHeight;
+        %tmp.82 = invoke %tmp.80 %tmp.81();
+        %tmp.83 = 3;
+        %tmp.84 = div %tmp.82 %tmp.83;
+        %tmp.85 = 0;
+        %tmp.86 = lgetv %dc;
+        symbol [ dc %tmp.86 94 107 109 ];
+        symbol [ getWidth %tmp.87 94 110 118 ];
+        %tmp.87 = getv function %tmp.86 :getWidth;
+        %tmp.88 = invoke %tmp.86 %tmp.87();
+        %tmp.89 = 120;
+        %tmp.90 = div %tmp.88 %tmp.89;
+        %tmp.91 = invoke %tmp.75 %tmp.76(%tmp.78, %tmp.79, %tmp.84, %tmp.85, %tmp.90);
+        invoke %tmp.73 %tmp.74(%tmp.91);
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 95 8 ]
+        %tmp.92 = lgetv %dc;
+        symbol [ dc %tmp.92 95 8 10 ];
+        symbol [ setColor %tmp.93 95 11 19 ];
+        %tmp.93 = getv function %tmp.92 :setColor;
+        symbol [ Graphics %tmp.94 95 20 28 ];
+        %tmp.94 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.95 95 29 38 ];
+        %tmp.95 = getv %tmp.94 :COLOR_RED;
+        symbol [ Graphics %tmp.96 95 40 48 ];
+        %tmp.96 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.97 95 49 66 ];
+        %tmp.97 = getv %tmp.96 :COLOR_TRANSPARENT;
+        invoke %tmp.92 %tmp.93(%tmp.95, %tmp.97);
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 96 8 ]
+        %tmp.98 = lgetv %dc;
+        symbol [ dc %tmp.98 96 8 10 ];
+        symbol [ fillPolygon %tmp.99 96 11 22 ];
+        %tmp.99 = getv function %tmp.98 :fillPolygon;
+        %tmp.100 = self;
+        symbol [ generateHandCoordinates %tmp.101 96 23 46 ];
+        %tmp.101 = getv function %tmp.100 :generateHandCoordinates;
+        symbol [ _screenCenterPoint %tmp.103 96 47 65 ];
+        %tmp.103 = getv ? :_screenCenterPoint;
+        %tmp.104 = lgetv %secondHand.4;
+        symbol [ secondHand %tmp.104 96 67 77 ];
+        %tmp.105 = lgetv %dc;
+        symbol [ dc %tmp.105 96 79 81 ];
+        symbol [ getHeight %tmp.106 96 82 91 ];
+        %tmp.106 = getv function %tmp.105 :getHeight;
+        %tmp.107 = invoke %tmp.105 %tmp.106();
+        %tmp.108 = 4;
+        %tmp.109 = div %tmp.107 %tmp.108;
+        %tmp.110 = 20;
+        %tmp.111 = lgetv %dc;
+        symbol [ dc %tmp.111 96 103 105 ];
+        symbol [ getWidth %tmp.112 96 106 114 ];
+        %tmp.112 = getv function %tmp.111 :getWidth;
+        %tmp.113 = invoke %tmp.111 %tmp.112();
+        %tmp.114 = 120;
+        %tmp.115 = div %tmp.113 %tmp.114;
+        %tmp.116 = invoke %tmp.100 %tmp.101(%tmp.103, %tmp.104, %tmp.109, %tmp.110, %tmp.115);
+        invoke %tmp.98 %tmp.99(%tmp.116);
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 98 8 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_70_40_133_4_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_70_40_133_4_stop" ]
+        %width.5 = local;
+        symbol [ width %width.5 98 12 17 ];
+        %tmp.117 = lgetv %dc;
+        symbol [ dc %tmp.117 98 20 22 ];
+        symbol [ getWidth %tmp.118 98 23 31 ];
+        %tmp.118 = getv function %tmp.117 :getWidth;
+        %tmp.119 = invoke %tmp.117 %tmp.118();
+        lputv %width.5 %tmp.119;
+        symbol [ width %width.5 98 12 17 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 99 8 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_70_40_133_4_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_70_40_133_4_stop" ]
+        %height.6 = local;
+        symbol [ height %height.6 99 12 18 ];
+        %tmp.120 = lgetv %dc;
+        symbol [ dc %tmp.120 99 21 23 ];
+        symbol [ getHeight %tmp.121 99 24 33 ];
+        %tmp.121 = getv function %tmp.120 :getHeight;
+        %tmp.122 = invoke %tmp.120 %tmp.121();
+        lputv %height.6 %tmp.122;
+        symbol [ height %height.6 99 12 18 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 102 8 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_70_40_133_4_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_70_40_133_4_stop" ]
+        %font.7 = local;
+        symbol [ font %font.7 102 12 16 ];
+        symbol [ _font %tmp.124 102 19 24 ];
+        %tmp.124 = getv ? :_font;
+        lputv %font.7 %tmp.124;
+        symbol [ font %font.7 102 12 16 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 103 8 ]
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_103_8_110_8_if_stmt:
+        %tmp.125 = lgetv %font.7;
+        symbol [ font %tmp.125 103 12 16 ];
+        %tmp.126 = null;
+        %tmp.127 = ne %tmp.125 %tmp.126;
+        bf %tmp.127 @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_103_8_110_8_if_end;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_103_8_110_8_if_true:
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_103_26_110_8_start:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 104 12 ]
+        %tmp.128 = lgetv %dc;
+        symbol [ dc %tmp.128 104 12 14 ];
+        symbol [ setColor %tmp.129 104 15 23 ];
+        %tmp.129 = getv function %tmp.128 :setColor;
+        %tmp.130 = 0xF0E68C;
+        symbol [ Graphics %tmp.131 104 34 42 ];
+        %tmp.131 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.132 104 43 60 ];
+        %tmp.132 = getv %tmp.131 :COLOR_TRANSPARENT;
+        invoke %tmp.128 %tmp.129(%tmp.130, %tmp.132);
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 105 12 ]
+        %tmp.133 = lgetv %dc;
+        symbol [ dc %tmp.133 105 12 14 ];
+        symbol [ drawText %tmp.134 105 15 23 ];
+        %tmp.134 = getv function %tmp.133 :drawText;
+        %tmp.135 = lgetv %width.5;
+        symbol [ width %tmp.135 105 24 29 ];
+        %tmp.136 = 2;
+        %tmp.137 = div %tmp.135 %tmp.136;
+        %tmp.138 = 2;
+        %tmp.139 = lgetv %font.7;
+        symbol [ font %tmp.139 105 38 42 ];
+        %tmp.140 = as %tmp.139 { (!Null) };
+        %tmp.141 = "12";
+        symbol [ Graphics %tmp.142 105 50 58 ];
+        %tmp.142 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.143 105 59 78 ];
+        %tmp.143 = getv %tmp.142 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.133 %tmp.134(%tmp.137, %tmp.138, %tmp.140, %tmp.141, %tmp.143);
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 106 12 ]
+        %tmp.144 = lgetv %dc;
+        symbol [ dc %tmp.144 106 12 14 ];
+        symbol [ drawText %tmp.145 106 15 23 ];
+        %tmp.145 = getv function %tmp.144 :drawText;
+        %tmp.146 = lgetv %width.5;
+        symbol [ width %tmp.146 106 24 29 ];
+        %tmp.147 = 2;
+        %tmp.148 = sub %tmp.146 %tmp.147;
+        %tmp.149 = lgetv %height.6;
+        symbol [ height %tmp.149 106 36 42 ];
+        %tmp.150 = 2;
+        %tmp.151 = div %tmp.149 %tmp.150;
+        %tmp.152 = 15;
+        %tmp.153 = sub %tmp.151 %tmp.152;
+        %tmp.154 = lgetv %font.7;
+        symbol [ font %tmp.154 106 54 58 ];
+        %tmp.155 = as %tmp.154 { (!Null) };
+        %tmp.156 = "3";
+        symbol [ Graphics %tmp.157 106 65 73 ];
+        %tmp.157 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_RIGHT %tmp.158 106 74 92 ];
+        %tmp.158 = getv %tmp.157 :TEXT_JUSTIFY_RIGHT;
+        invoke %tmp.144 %tmp.145(%tmp.148, %tmp.153, %tmp.155, %tmp.156, %tmp.158);
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 107 12 ]
+        %tmp.159 = lgetv %dc;
+        symbol [ dc %tmp.159 107 12 14 ];
+        symbol [ setColor %tmp.160 107 15 23 ];
+        %tmp.160 = getv function %tmp.159 :setColor;
+        %tmp.161 = 0xF0E68C;
+        symbol [ Graphics %tmp.162 107 34 42 ];
+        %tmp.162 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.163 107 43 54 ];
+        %tmp.163 = getv %tmp.162 :COLOR_BLACK;
+        invoke %tmp.159 %tmp.160(%tmp.161, %tmp.163);
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 108 12 ]
+        %tmp.164 = lgetv %dc;
+        symbol [ dc %tmp.164 108 12 14 ];
+        symbol [ drawText %tmp.165 108 15 23 ];
+        %tmp.165 = getv function %tmp.164 :drawText;
+        %tmp.166 = lgetv %width.5;
+        symbol [ width %tmp.166 108 24 29 ];
+        %tmp.167 = 2;
+        %tmp.168 = div %tmp.166 %tmp.167;
+        %tmp.169 = lgetv %height.6;
+        symbol [ height %tmp.169 108 35 41 ];
+        %tmp.170 = 30;
+        %tmp.171 = sub %tmp.169 %tmp.170;
+        %tmp.172 = lgetv %font.7;
+        symbol [ font %tmp.172 108 48 52 ];
+        %tmp.173 = as %tmp.172 { (!Null) };
+        %tmp.174 = "6";
+        symbol [ Graphics %tmp.175 108 59 67 ];
+        %tmp.175 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.176 108 68 87 ];
+        %tmp.176 = getv %tmp.175 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.164 %tmp.165(%tmp.168, %tmp.171, %tmp.173, %tmp.174, %tmp.176);
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 109 12 ]
+        %tmp.177 = lgetv %dc;
+        symbol [ dc %tmp.177 109 12 14 ];
+        symbol [ drawText %tmp.178 109 15 23 ];
+        %tmp.178 = getv function %tmp.177 :drawText;
+        %tmp.179 = 2;
+        %tmp.180 = lgetv %height.6;
+        symbol [ height %tmp.180 109 28 34 ];
+        %tmp.181 = 2;
+        %tmp.182 = div %tmp.180 %tmp.181;
+        %tmp.183 = 15;
+        %tmp.184 = sub %tmp.182 %tmp.183;
+        %tmp.185 = lgetv %font.7;
+        symbol [ font %tmp.185 109 46 50 ];
+        %tmp.186 = as %tmp.185 { (!Null) };
+        %tmp.187 = "9";
+        symbol [ Graphics %tmp.188 109 57 65 ];
+        %tmp.188 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_LEFT %tmp.189 109 66 83 ];
+        %tmp.189 = getv %tmp.188 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.177 %tmp.178(%tmp.179, %tmp.184, %tmp.186, %tmp.187, %tmp.189);
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_103_26_110_8_stop:
+        goto @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_103_8_110_8_if_end;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_103_8_110_8_if_end:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 132 8 ]
+        %tmp.190 = lgetv %dc;
+        symbol [ dc %tmp.190 132 8 10 ];
+        symbol [ drawBitmap %tmp.191 132 11 21 ];
+        %tmp.191 = getv function %tmp.190 :drawBitmap;
+        %tmp.192 = lgetv %dc;
+        symbol [ dc %tmp.192 132 23 25 ];
+        symbol [ getWidth %tmp.193 132 26 34 ];
+        %tmp.193 = getv function %tmp.192 :getWidth;
+        %tmp.194 = invoke %tmp.192 %tmp.193();
+        %tmp.195 = 2;
+        %tmp.196 = div %tmp.194 %tmp.195;
+        %tmp.197 = 10;
+        %tmp.198 = sub %tmp.196 %tmp.197;
+        %tmp.199 = lgetv %dc;
+        symbol [ dc %tmp.199 132 42 44 ];
+        symbol [ getHeight %tmp.200 132 45 54 ];
+        %tmp.200 = getv function %tmp.199 :getHeight;
+        %tmp.201 = invoke %tmp.199 %tmp.200();
+        %tmp.202 = 2;
+        %tmp.203 = div %tmp.201 %tmp.202;
+        %tmp.204 = 10;
+        %tmp.205 = sub %tmp.203 %tmp.204;
+        symbol [ Snitch %tmp.207 132 63 69 ];
+        %tmp.207 = getv ? :Snitch;
+        invoke %tmp.190 %tmp.191(%tmp.198, %tmp.205, %tmp.207);
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_70_40_133_4_stop:
+    }
+    //! Draw the watch face background
+    //! onUpdate uses this method to transfer newly rendered Buffered Bitmaps
+    //! to the main display.
+    //! onPartialUpdate uses this to blank the second hand from the previous
+    //! second before outputting the new one.
+    //! @param dc Device context
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 141; @symbol_functiondef = [drawBackground,141,21,35]; @symbol_param<0> = [dc,141,36,38]; @symbol_param<0>_type<0> = [Dc,141,42,44]; ]
+    private
+    function drawBackground(dc as Dc) as Void {
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_141_54_148_4_start:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 145 8 ]
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_145_8_147_8_if_stmt:
+        %tmp.1 = null;
+        symbol [ _offscreenBuffer %tmp.3 145 20 36 ];
+        %tmp.3 = getv ? :_offscreenBuffer;
+        %tmp.4 = ne %tmp.1 %tmp.3;
+        bf %tmp.4 @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_145_8_147_8_if_end;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_145_8_147_8_if_true:
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_145_38_147_8_start:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 146 12 ]
+        %tmp.5 = lgetv %dc;
+        symbol [ dc %tmp.5 146 12 14 ];
+        symbol [ drawBitmap %tmp.6 146 15 25 ];
+        %tmp.6 = getv function %tmp.5 :drawBitmap;
+        %tmp.7 = 0;
+        %tmp.8 = 0;
+        symbol [ _offscreenBuffer %tmp.10 146 32 48 ];
+        %tmp.10 = getv ? :_offscreenBuffer;
+        %tmp.11 = as %tmp.10 { (!Null) };
+        invoke %tmp.5 %tmp.6(%tmp.7, %tmp.8, %tmp.11);
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_145_38_147_8_stop:
+        goto @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_145_8_147_8_if_end;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_145_8_147_8_if_end:
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_141_54_148_4_stop:
+    }
+    //! This function is used to generate the coordinates of the 4 corners of the polygon
+    //! used to draw a watch hand. The coordinates are generated with specified length,
+    //! tail length, and width and rotated around the center point at the provided angle.
+    //! 0 degrees is at the 12 o'clock position, and increases in the clockwise direction.
+    //! @param centerPoint The center of the clock
+    //! @param angle Angle of the hand in radians
+    //! @param handLength The length of the hand from the center to point
+    //! @param tailLength The length of the tail of the hand
+    //! @param width The width of the watch hand
+    //! @return The coordinates of the watch hand
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 160; @symbol_functiondef = [generateHandCoordinates,160,21,44]; @symbol_param<0> = [centerPoint,160,45,56]; @symbol_param<0>_type<0> = [Array,160,60,65]; @symbol_param<0>_type<1> = [Number,160,66,72]; @symbol_param<1> = [angle,160,75,80]; @symbol_param<1>_type<0> = [Float,160,84,89]; @symbol_param<2> = [handLength,160,91,101]; @symbol_param<2>_type<0> = [Number,160,105,111]; @symbol_param<3> = [tailLength,160,113,123]; @symbol_param<3>_type<0> = [Number,160,127,133]; @symbol_param<4> = [width,160,135,140]; @symbol_param<4>_type<0> = [Number,160,144,150]; @symbol_return<0> = [Array,160,155,160]; @symbol_return<1> = [Numeric,160,162,169]; @symbol_return<2> = [Numeric,160,171,178]; ]
+    private
+    function generateHandCoordinates(centerPoint as Array<Number>, angle as Float, handLength as Number, tailLength as Number, width as Number) as Array<[Numeric, Numeric]> {
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_160_181_179_4_start:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 162 8 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_160_181_179_4_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_160_181_179_4_stop" ]
+        %coords.1 = local;
+        symbol [ coords %coords.1 162 12 18 ];
+        %tmp.1 = newa 4;
+        %tmp.2 = newa 2;
+        %tmp.3 = lgetv %width;
+        symbol [ width %tmp.3 162 25 30 ];
+        %tmp.4 = 2;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        %tmp.6 = sub 0 %tmp.5;
+        %tmp.7 = dup %tmp.2;
+        %tmp.8 = aputv %tmp.7 0 %tmp.6;
+        %tmp.9 = lgetv %tailLength;
+        symbol [ tailLength %tmp.9 162 37 47 ];
+        %tmp.10 = dup %tmp.8;
+        %tmp.11 = aputv %tmp.10 1 %tmp.9;
+        %tmp.12 = dup %tmp.1;
+        %tmp.13 = aputv %tmp.12 0 %tmp.11;
+        %tmp.14 = newa 2;
+        %tmp.15 = lgetv %width;
+        symbol [ width %tmp.15 163 25 30 ];
+        %tmp.16 = 2;
+        %tmp.17 = div %tmp.15 %tmp.16;
+        %tmp.18 = sub 0 %tmp.17;
+        %tmp.19 = dup %tmp.14;
+        %tmp.20 = aputv %tmp.19 0 %tmp.18;
+        %tmp.21 = lgetv %handLength;
+        symbol [ handLength %tmp.21 163 38 48 ];
+        %tmp.22 = sub 0 %tmp.21;
+        %tmp.23 = dup %tmp.20;
+        %tmp.24 = aputv %tmp.23 1 %tmp.22;
+        %tmp.25 = dup %tmp.13;
+        %tmp.26 = aputv %tmp.25 1 %tmp.24;
+        %tmp.27 = newa 2;
+        %tmp.28 = lgetv %width;
+        symbol [ width %tmp.28 164 23 28 ];
+        %tmp.29 = 2;
+        %tmp.30 = div %tmp.28 %tmp.29;
+        %tmp.31 = dup %tmp.27;
+        %tmp.32 = aputv %tmp.31 0 %tmp.30;
+        %tmp.33 = lgetv %handLength;
+        symbol [ handLength %tmp.33 164 35 45 ];
+        %tmp.34 = sub 0 %tmp.33;
+        %tmp.35 = dup %tmp.32;
+        %tmp.36 = aputv %tmp.35 1 %tmp.34;
+        %tmp.37 = dup %tmp.26;
+        %tmp.38 = aputv %tmp.37 2 %tmp.36;
+        %tmp.39 = newa 2;
+        %tmp.40 = lgetv %width;
+        symbol [ width %tmp.40 165 23 28 ];
+        %tmp.41 = 2;
+        %tmp.42 = div %tmp.40 %tmp.41;
+        %tmp.43 = dup %tmp.39;
+        %tmp.44 = aputv %tmp.43 0 %tmp.42;
+        %tmp.45 = lgetv %tailLength;
+        symbol [ tailLength %tmp.45 165 34 44 ];
+        %tmp.46 = dup %tmp.44;
+        %tmp.47 = aputv %tmp.46 1 %tmp.45;
+        %tmp.48 = dup %tmp.38;
+        %tmp.49 = aputv %tmp.48 3 %tmp.47;
+        lputv %coords.1 %tmp.49;
+        symbol [ coords %coords.1 162 12 18 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 166 8 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_160_181_179_4_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_160_181_179_4_stop" ]
+        %result.2 = local;
+        symbol [ result %result.2 166 12 18 ];
+        %tmp.51 = 4;
+        %tmp.50 = newa Array<[Numeric, Numeric]> %tmp.51;
+        symbol [ Array %tmp.50 166 25 30 ];
+        symbol [ Numeric %tmp.50 166 32 39 ];
+        symbol [ Numeric %tmp.50 166 41 48 ];
+        lputv %result.2 %tmp.50;
+        symbol [ result %result.2 166 12 18 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 167 8 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_160_181_179_4_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_160_181_179_4_stop" ]
+        %cos.3 = local;
+        symbol [ cos %cos.3 167 12 15 ];
+        symbol [ Math %tmp.53 167 18 22 ];
+        %tmp.53 = getv ? :Math;
+        symbol [ cos %tmp.54 167 23 26 ];
+        %tmp.54 = getv function %tmp.53 :cos;
+        %tmp.55 = lgetv %angle;
+        symbol [ angle %tmp.55 167 27 32 ];
+        %tmp.56 = invoke %tmp.53 %tmp.54(%tmp.55);
+        lputv %cos.3 %tmp.56;
+        symbol [ cos %cos.3 167 12 15 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 168 8 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_160_181_179_4_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_160_181_179_4_stop" ]
+        %sin.4 = local;
+        symbol [ sin %sin.4 168 12 15 ];
+        symbol [ Math %tmp.58 168 18 22 ];
+        %tmp.58 = getv ? :Math;
+        symbol [ sin %tmp.59 168 23 26 ];
+        %tmp.59 = getv function %tmp.58 :sin;
+        %tmp.60 = lgetv %angle;
+        symbol [ angle %tmp.60 168 27 32 ];
+        %tmp.61 = invoke %tmp.58 %tmp.59(%tmp.60);
+        lputv %sin.4 %tmp.61;
+        symbol [ sin %sin.4 168 12 15 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 171 8 ]
+        for @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_8_176_8_for_test @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_8_176_8_for_incr @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_8_176_8_for_end;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_8_176_8_for_init:
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_8_176_8_for_begin" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_8_176_8_for_end" ]
+        %i.5 = local;
+        symbol [ i %i.5 171 17 18 ];
+        %tmp.62 = 0;
+        lputv %i.5 %tmp.62;
+        symbol [ i %i.5 171 17 18 ];
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_8_176_8_for_test:
+        %tmp.63 = lgetv %i.5;
+        symbol [ i %tmp.63 171 24 25 ];
+        %tmp.64 = 4;
+        %tmp.65 = lt %tmp.63 %tmp.64;
+        bf %tmp.65 @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_8_176_8_for_end;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_8_176_8_for_begin:
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_36_176_8_start:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 172 12 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_36_176_8_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_36_176_8_stop" ]
+        %x.6 = local;
+        symbol [ x %x.6 172 16 17 ];
+        %tmp.66 = lgetv %coords.1;
+        symbol [ coords %tmp.66 172 21 27 ];
+        %tmp.67 = lgetv %i.5;
+        symbol [ i %tmp.67 172 28 29 ];
+        %tmp.68 = agetv %tmp.66 %tmp.67;
+        %tmp.69 = 0;
+        %tmp.70 = agetv %tmp.68 %tmp.69;
+        %tmp.71 = lgetv %cos.3;
+        symbol [ cos %tmp.71 172 36 39 ];
+        %tmp.72 = mul %tmp.70 %tmp.71;
+        %tmp.73 = lgetv %coords.1;
+        symbol [ coords %tmp.73 172 44 50 ];
+        %tmp.74 = lgetv %i.5;
+        symbol [ i %tmp.74 172 51 52 ];
+        %tmp.75 = agetv %tmp.73 %tmp.74;
+        %tmp.76 = 1;
+        %tmp.77 = agetv %tmp.75 %tmp.76;
+        %tmp.78 = lgetv %sin.4;
+        symbol [ sin %tmp.78 172 59 62 ];
+        %tmp.79 = mul %tmp.77 %tmp.78;
+        %tmp.80 = sub %tmp.72 %tmp.79;
+        %tmp.81 = 0.5;
+        %tmp.82 = add %tmp.80 %tmp.81;
+        lputv %x.6 %tmp.82;
+        symbol [ x %x.6 172 16 17 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 173 12 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_36_176_8_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_36_176_8_stop" ]
+        %y.7 = local;
+        symbol [ y %y.7 173 16 17 ];
+        %tmp.83 = lgetv %coords.1;
+        symbol [ coords %tmp.83 173 21 27 ];
+        %tmp.84 = lgetv %i.5;
+        symbol [ i %tmp.84 173 28 29 ];
+        %tmp.85 = agetv %tmp.83 %tmp.84;
+        %tmp.86 = 0;
+        %tmp.87 = agetv %tmp.85 %tmp.86;
+        %tmp.88 = lgetv %sin.4;
+        symbol [ sin %tmp.88 173 36 39 ];
+        %tmp.89 = mul %tmp.87 %tmp.88;
+        %tmp.90 = lgetv %coords.1;
+        symbol [ coords %tmp.90 173 44 50 ];
+        %tmp.91 = lgetv %i.5;
+        symbol [ i %tmp.91 173 51 52 ];
+        %tmp.92 = agetv %tmp.90 %tmp.91;
+        %tmp.93 = 1;
+        %tmp.94 = agetv %tmp.92 %tmp.93;
+        %tmp.95 = lgetv %cos.3;
+        symbol [ cos %tmp.95 173 59 62 ];
+        %tmp.96 = mul %tmp.94 %tmp.95;
+        %tmp.97 = add %tmp.89 %tmp.96;
+        %tmp.98 = 0.5;
+        %tmp.99 = add %tmp.97 %tmp.98;
+        lputv %y.7 %tmp.99;
+        symbol [ y %y.7 173 16 17 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 175 12 ]
+        %tmp.100 = lgetv %result.2;
+        symbol [ result %tmp.100 175 12 18 ];
+        %tmp.101 = newa 2;
+        %tmp.102 = lgetv %centerPoint;
+        symbol [ centerPoint %tmp.102 175 25 36 ];
+        %tmp.103 = 0;
+        %tmp.104 = agetv %tmp.102 %tmp.103;
+        %tmp.105 = lgetv %x.6;
+        symbol [ x %tmp.105 175 42 43 ];
+        %tmp.106 = add %tmp.104 %tmp.105;
+        %tmp.107 = dup %tmp.101;
+        %tmp.108 = aputv %tmp.107 0 %tmp.106;
+        %tmp.109 = lgetv %centerPoint;
+        symbol [ centerPoint %tmp.109 175 45 56 ];
+        %tmp.110 = 1;
+        %tmp.111 = agetv %tmp.109 %tmp.110;
+        %tmp.112 = lgetv %y.7;
+        symbol [ y %tmp.112 175 62 63 ];
+        %tmp.113 = add %tmp.111 %tmp.112;
+        %tmp.114 = dup %tmp.108;
+        %tmp.115 = aputv %tmp.114 1 %tmp.113;
+        %tmp.116 = lgetv %i.5;
+        symbol [ i %tmp.116 175 19 20 ];
+        aputv %tmp.100 %tmp.116 %tmp.115;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_36_176_8_stop:
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_8_176_8_for_incr:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 171 ]
+        %tmp.119 = lgetv %i.5;
+        symbol [ i %tmp.119 171 31 32 ];
+        %tmp.120 = add %tmp.119 1;
+        lputv %i.5 %tmp.120;
+        symbol [ i %i.5 171 31 32 ];
+        goto @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_8_176_8_for_test;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_171_8_176_8_for_end:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 178 8 ]
+        %tmp.121 = lgetv %result.2;
+        symbol [ result %tmp.121 178 15 21 ];
+        ret %tmp.121;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_160_181_179_4_stop:
+    }
+    //! Draws the clock tick marks around the outside edges of the screen.
+    //! @param dc Device context
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 183; @symbol_functiondef = [drawHashMarks,183,21,34]; @symbol_param<0> = [dc,183,35,37]; @symbol_param<0>_type<0> = [Dc,183,41,43]; ]
+    private
+    function drawHashMarks(dc as Dc) as Void {
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_183_53_223_4_start:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 184 8 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_183_53_223_4_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_183_53_223_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 184 12 17 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 184 20 22 ];
+        symbol [ getWidth %tmp.2 184 23 31 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+        symbol [ width %width.1 184 12 17 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 185 8 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_183_53_223_4_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_183_53_223_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 185 12 18 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 185 21 23 ];
+        symbol [ getHeight %tmp.5 185 24 33 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %height.2 %tmp.6;
+        symbol [ height %height.2 185 12 18 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 188 8 ]
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_188_8_222_8_if_stmt:
+        symbol [ System %tmp.7 188 12 18 ];
+        %tmp.7 = getm $.Toybox.System;
+        symbol [ SCREEN_SHAPE_ROUND %tmp.8 188 19 37 ];
+        %tmp.8 = getv %tmp.7 :SCREEN_SHAPE_ROUND;
+        symbol [ _screenShape %tmp.10 188 41 53 ];
+        %tmp.10 = getv ? :_screenShape;
+        %tmp.11 = eq %tmp.8 %tmp.10;
+        bf %tmp.11 @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_188_8_222_8_if_else_false;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_188_8_222_8_if_true:
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_188_55_206_8_start:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 189 12 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_188_55_206_8_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_188_55_206_8_stop" ]
+        %outerRad.3 = local;
+        symbol [ outerRad %outerRad.3 189 16 24 ];
+        %tmp.12 = lgetv %width.1;
+        symbol [ width %tmp.12 189 27 32 ];
+        %tmp.13 = 2;
+        %tmp.14 = div %tmp.12 %tmp.13;
+        lputv %outerRad.3 %tmp.14;
+        symbol [ outerRad %outerRad.3 189 16 24 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 190 12 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_188_55_206_8_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_188_55_206_8_stop" ]
+        %innerRad.4 = local;
+        symbol [ innerRad %innerRad.4 190 16 24 ];
+        %tmp.15 = lgetv %outerRad.3;
+        symbol [ outerRad %tmp.15 190 27 35 ];
+        %tmp.16 = 10;
+        %tmp.17 = sub %tmp.15 %tmp.16;
+        lputv %innerRad.4 %tmp.17;
+        symbol [ innerRad %innerRad.4 190 16 24 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 192 12 ]
+        for @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_12_205_12_for_test @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_12_205_12_for_incr @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_12_205_12_for_end;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_12_205_12_for_init:
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_12_205_12_for_begin" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_12_205_12_for_end" ]
+        %i.5 = local;
+        symbol [ i %i.5 192 21 22 ];
+        symbol [ Math %tmp.19 192 25 29 ];
+        %tmp.19 = getv ? :Math;
+        symbol [ PI %tmp.20 192 30 32 ];
+        %tmp.20 = getv %tmp.19 :PI;
+        %tmp.21 = 6;
+        %tmp.22 = div %tmp.20 %tmp.21;
+        lputv %i.5 %tmp.22;
+        symbol [ i %i.5 192 21 22 ];
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_12_205_12_for_test:
+        %tmp.23 = lgetv %i.5;
+        symbol [ i %tmp.23 192 38 39 ];
+        %tmp.24 = 11;
+        symbol [ Math %tmp.26 192 48 52 ];
+        %tmp.26 = getv ? :Math;
+        symbol [ PI %tmp.27 192 53 55 ];
+        %tmp.27 = getv %tmp.26 :PI;
+        %tmp.28 = mul %tmp.24 %tmp.27;
+        %tmp.29 = 6;
+        %tmp.30 = div %tmp.28 %tmp.29;
+        %tmp.31 = lte %tmp.23 %tmp.30;
+        bf %tmp.31 @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_12_205_12_for_end;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_12_205_12_for_begin:
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_81_205_12_start:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 194 16 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_81_205_12_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_81_205_12_stop" ]
+        %sY.6 = local;
+        symbol [ sY %sY.6 194 20 22 ];
+        %tmp.32 = lgetv %outerRad.3;
+        symbol [ outerRad %tmp.32 194 25 33 ];
+        %tmp.33 = lgetv %innerRad.4;
+        symbol [ innerRad %tmp.33 194 36 44 ];
+        symbol [ Math %tmp.35 194 47 51 ];
+        %tmp.35 = getv ? :Math;
+        symbol [ sin %tmp.36 194 52 55 ];
+        %tmp.36 = getv function %tmp.35 :sin;
+        %tmp.37 = lgetv %i.5;
+        symbol [ i %tmp.37 194 56 57 ];
+        %tmp.38 = invoke %tmp.35 %tmp.36(%tmp.37);
+        %tmp.39 = mul %tmp.33 %tmp.38;
+        %tmp.40 = add %tmp.32 %tmp.39;
+        lputv %sY.6 %tmp.40;
+        symbol [ sY %sY.6 194 20 22 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 195 16 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_81_205_12_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_81_205_12_stop" ]
+        %eY.7 = local;
+        symbol [ eY %eY.7 195 20 22 ];
+        %tmp.41 = lgetv %outerRad.3;
+        symbol [ outerRad %tmp.41 195 25 33 ];
+        %tmp.42 = lgetv %outerRad.3;
+        symbol [ outerRad %tmp.42 195 36 44 ];
+        symbol [ Math %tmp.44 195 47 51 ];
+        %tmp.44 = getv ? :Math;
+        symbol [ sin %tmp.45 195 52 55 ];
+        %tmp.45 = getv function %tmp.44 :sin;
+        %tmp.46 = lgetv %i.5;
+        symbol [ i %tmp.46 195 56 57 ];
+        %tmp.47 = invoke %tmp.44 %tmp.45(%tmp.46);
+        %tmp.48 = mul %tmp.42 %tmp.47;
+        %tmp.49 = add %tmp.41 %tmp.48;
+        lputv %eY.7 %tmp.49;
+        symbol [ eY %eY.7 195 20 22 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 196 16 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_81_205_12_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_81_205_12_stop" ]
+        %sX.8 = local;
+        symbol [ sX %sX.8 196 20 22 ];
+        %tmp.50 = lgetv %outerRad.3;
+        symbol [ outerRad %tmp.50 196 25 33 ];
+        %tmp.51 = lgetv %innerRad.4;
+        symbol [ innerRad %tmp.51 196 36 44 ];
+        symbol [ Math %tmp.53 196 47 51 ];
+        %tmp.53 = getv ? :Math;
+        symbol [ cos %tmp.54 196 52 55 ];
+        %tmp.54 = getv function %tmp.53 :cos;
+        %tmp.55 = lgetv %i.5;
+        symbol [ i %tmp.55 196 56 57 ];
+        %tmp.56 = invoke %tmp.53 %tmp.54(%tmp.55);
+        %tmp.57 = mul %tmp.51 %tmp.56;
+        %tmp.58 = add %tmp.50 %tmp.57;
+        lputv %sX.8 %tmp.58;
+        symbol [ sX %sX.8 196 20 22 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 197 16 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_81_205_12_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_81_205_12_stop" ]
+        %eX.9 = local;
+        symbol [ eX %eX.9 197 20 22 ];
+        %tmp.59 = lgetv %outerRad.3;
+        symbol [ outerRad %tmp.59 197 25 33 ];
+        %tmp.60 = lgetv %outerRad.3;
+        symbol [ outerRad %tmp.60 197 36 44 ];
+        symbol [ Math %tmp.62 197 47 51 ];
+        %tmp.62 = getv ? :Math;
+        symbol [ cos %tmp.63 197 52 55 ];
+        %tmp.63 = getv function %tmp.62 :cos;
+        %tmp.64 = lgetv %i.5;
+        symbol [ i %tmp.64 197 56 57 ];
+        %tmp.65 = invoke %tmp.62 %tmp.63(%tmp.64);
+        %tmp.66 = mul %tmp.60 %tmp.65;
+        %tmp.67 = add %tmp.59 %tmp.66;
+        lputv %eX.9 %tmp.67;
+        symbol [ eX %eX.9 197 20 22 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 198 16 ]
+        %tmp.68 = lgetv %dc;
+        symbol [ dc %tmp.68 198 16 18 ];
+        symbol [ drawLine %tmp.69 198 19 27 ];
+        %tmp.69 = getv function %tmp.68 :drawLine;
+        %tmp.70 = lgetv %sX.8;
+        symbol [ sX %tmp.70 198 28 30 ];
+        %tmp.71 = lgetv %sY.6;
+        symbol [ sY %tmp.71 198 32 34 ];
+        %tmp.72 = lgetv %eX.9;
+        symbol [ eX %tmp.72 198 36 38 ];
+        %tmp.73 = lgetv %eY.7;
+        symbol [ eY %tmp.73 198 40 42 ];
+        invoke %tmp.68 %tmp.69(%tmp.70, %tmp.71, %tmp.72, %tmp.73);
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 199 16 ]
+        %tmp.74 = lgetv %i.5;
+        symbol [ i %tmp.74 199 16 17 ];
+        symbol [ Math %tmp.76 199 21 25 ];
+        %tmp.76 = getv ? :Math;
+        symbol [ PI %tmp.77 199 26 28 ];
+        %tmp.77 = getv %tmp.76 :PI;
+        %tmp.78 = 6;
+        %tmp.79 = div %tmp.77 %tmp.78;
+        %tmp.80 = add %tmp.74 %tmp.79;
+        lputv %i.5 %tmp.80;
+        symbol [ i %i.5 199 16 17 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 200 16 ]
+        %tmp.81 = lgetv %outerRad.3;
+        symbol [ outerRad %tmp.81 200 21 29 ];
+        %tmp.82 = lgetv %innerRad.4;
+        symbol [ innerRad %tmp.82 200 32 40 ];
+        symbol [ Math %tmp.84 200 43 47 ];
+        %tmp.84 = getv ? :Math;
+        symbol [ sin %tmp.85 200 48 51 ];
+        %tmp.85 = getv function %tmp.84 :sin;
+        %tmp.86 = lgetv %i.5;
+        symbol [ i %tmp.86 200 52 53 ];
+        %tmp.87 = invoke %tmp.84 %tmp.85(%tmp.86);
+        %tmp.88 = mul %tmp.82 %tmp.87;
+        %tmp.89 = add %tmp.81 %tmp.88;
+        lputv %sY.6 %tmp.89;
+        symbol [ sY %sY.6 200 16 18 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 201 16 ]
+        %tmp.90 = lgetv %outerRad.3;
+        symbol [ outerRad %tmp.90 201 21 29 ];
+        %tmp.91 = lgetv %outerRad.3;
+        symbol [ outerRad %tmp.91 201 32 40 ];
+        symbol [ Math %tmp.93 201 43 47 ];
+        %tmp.93 = getv ? :Math;
+        symbol [ sin %tmp.94 201 48 51 ];
+        %tmp.94 = getv function %tmp.93 :sin;
+        %tmp.95 = lgetv %i.5;
+        symbol [ i %tmp.95 201 52 53 ];
+        %tmp.96 = invoke %tmp.93 %tmp.94(%tmp.95);
+        %tmp.97 = mul %tmp.91 %tmp.96;
+        %tmp.98 = add %tmp.90 %tmp.97;
+        lputv %eY.7 %tmp.98;
+        symbol [ eY %eY.7 201 16 18 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 202 16 ]
+        %tmp.99 = lgetv %outerRad.3;
+        symbol [ outerRad %tmp.99 202 21 29 ];
+        %tmp.100 = lgetv %innerRad.4;
+        symbol [ innerRad %tmp.100 202 32 40 ];
+        symbol [ Math %tmp.102 202 43 47 ];
+        %tmp.102 = getv ? :Math;
+        symbol [ cos %tmp.103 202 48 51 ];
+        %tmp.103 = getv function %tmp.102 :cos;
+        %tmp.104 = lgetv %i.5;
+        symbol [ i %tmp.104 202 52 53 ];
+        %tmp.105 = invoke %tmp.102 %tmp.103(%tmp.104);
+        %tmp.106 = mul %tmp.100 %tmp.105;
+        %tmp.107 = add %tmp.99 %tmp.106;
+        lputv %sX.8 %tmp.107;
+        symbol [ sX %sX.8 202 16 18 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 203 16 ]
+        %tmp.108 = lgetv %outerRad.3;
+        symbol [ outerRad %tmp.108 203 21 29 ];
+        %tmp.109 = lgetv %outerRad.3;
+        symbol [ outerRad %tmp.109 203 32 40 ];
+        symbol [ Math %tmp.111 203 43 47 ];
+        %tmp.111 = getv ? :Math;
+        symbol [ cos %tmp.112 203 48 51 ];
+        %tmp.112 = getv function %tmp.111 :cos;
+        %tmp.113 = lgetv %i.5;
+        symbol [ i %tmp.113 203 52 53 ];
+        %tmp.114 = invoke %tmp.111 %tmp.112(%tmp.113);
+        %tmp.115 = mul %tmp.109 %tmp.114;
+        %tmp.116 = add %tmp.108 %tmp.115;
+        lputv %eX.9 %tmp.116;
+        symbol [ eX %eX.9 203 16 18 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 204 16 ]
+        %tmp.117 = lgetv %dc;
+        symbol [ dc %tmp.117 204 16 18 ];
+        symbol [ drawLine %tmp.118 204 19 27 ];
+        %tmp.118 = getv function %tmp.117 :drawLine;
+        %tmp.119 = lgetv %sX.8;
+        symbol [ sX %tmp.119 204 28 30 ];
+        %tmp.120 = lgetv %sY.6;
+        symbol [ sY %tmp.120 204 32 34 ];
+        %tmp.121 = lgetv %eX.9;
+        symbol [ eX %tmp.121 204 36 38 ];
+        %tmp.122 = lgetv %eY.7;
+        symbol [ eY %tmp.122 204 40 42 ];
+        invoke %tmp.117 %tmp.118(%tmp.119, %tmp.120, %tmp.121, %tmp.122);
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_81_205_12_stop:
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_12_205_12_for_incr:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 192 ]
+        %tmp.123 = lgetv %i.5;
+        symbol [ i %tmp.123 192 61 62 ];
+        symbol [ Math %tmp.125 192 67 71 ];
+        %tmp.125 = getv ? :Math;
+        symbol [ PI %tmp.126 192 72 74 ];
+        %tmp.126 = getv %tmp.125 :PI;
+        %tmp.127 = 3;
+        %tmp.128 = div %tmp.126 %tmp.127;
+        %tmp.129 = add %tmp.123 %tmp.128;
+        lputv %i.5 %tmp.129;
+        symbol [ i %i.5 192 61 62 ];
+        goto @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_12_205_12_for_test;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_192_12_205_12_for_end:
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_188_55_206_8_stop:
+        goto @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_188_8_222_8_if_end;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_188_8_222_8_if_else_false:
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_206_15_222_8_start:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 207 12 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_206_15_222_8_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_206_15_222_8_stop" ]
+        %coords.10 = local;
+        symbol [ coords %coords.10 207 16 22 ];
+        %tmp.130 = newa 4;
+        %tmp.131 = 0;
+        %tmp.132 = dup %tmp.130;
+        %tmp.133 = aputv %tmp.132 0 %tmp.131;
+        %tmp.134 = lgetv %width.1;
+        symbol [ width %tmp.134 207 29 34 ];
+        %tmp.135 = 4;
+        %tmp.136 = div %tmp.134 %tmp.135;
+        %tmp.137 = dup %tmp.133;
+        %tmp.138 = aputv %tmp.137 1 %tmp.136;
+        %tmp.139 = 3;
+        %tmp.140 = lgetv %width.1;
+        symbol [ width %tmp.140 207 45 50 ];
+        %tmp.141 = mul %tmp.139 %tmp.140;
+        %tmp.142 = 4;
+        %tmp.143 = div %tmp.141 %tmp.142;
+        %tmp.144 = dup %tmp.138;
+        %tmp.145 = aputv %tmp.144 2 %tmp.143;
+        %tmp.146 = lgetv %width.1;
+        symbol [ width %tmp.146 207 57 62 ];
+        %tmp.147 = dup %tmp.145;
+        %tmp.148 = aputv %tmp.147 3 %tmp.146;
+        lputv %coords.10 %tmp.148;
+        symbol [ coords %coords.10 207 16 22 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 208 12 ]
+        for @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_12_221_12_for_test @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_12_221_12_for_incr @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_12_221_12_for_end;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_12_221_12_for_init:
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_12_221_12_for_begin" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_12_221_12_for_end" ]
+        %i.11 = local;
+        symbol [ i %i.11 208 21 22 ];
+        %tmp.149 = 0;
+        lputv %i.11 %tmp.149;
+        symbol [ i %i.11 208 21 22 ];
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_12_221_12_for_test:
+        %tmp.150 = lgetv %i.11;
+        symbol [ i %tmp.150 208 28 29 ];
+        %tmp.151 = lgetv %coords.10;
+        symbol [ coords %tmp.151 208 32 38 ];
+        symbol [ size %tmp.152 208 39 43 ];
+        %tmp.152 = getv function %tmp.151 :size;
+        %tmp.153 = invoke %tmp.151 %tmp.152();
+        %tmp.154 = lt %tmp.150 %tmp.153;
+        bf %tmp.154 @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_12_221_12_for_end;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_12_221_12_for_begin:
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_52_221_12_start:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 209 16 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_52_221_12_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_52_221_12_stop" ]
+        %dx.12 = local;
+        symbol [ dx %dx.12 209 20 22 ];
+        %tmp.155 = lgetv %width.1;
+        symbol [ width %tmp.155 209 27 32 ];
+        %tmp.156 = 2.0;
+        %tmp.157 = div %tmp.155 %tmp.156;
+        %tmp.158 = lgetv %coords.10;
+        symbol [ coords %tmp.158 209 42 48 ];
+        %tmp.159 = lgetv %i.11;
+        symbol [ i %tmp.159 209 49 50 ];
+        %tmp.160 = agetv %tmp.158 %tmp.159;
+        %tmp.161 = sub %tmp.157 %tmp.160;
+        %tmp.162 = lgetv %height.2;
+        symbol [ height %tmp.162 209 56 62 ];
+        %tmp.163 = 2.0;
+        %tmp.164 = div %tmp.162 %tmp.163;
+        %tmp.165 = div %tmp.161 %tmp.164;
+        lputv %dx.12 %tmp.165;
+        symbol [ dx %dx.12 209 20 22 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 210 16 ]
+        [ "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_52_221_12_start" "C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_52_221_12_stop" ]
+        %upperX.13 = local;
+        symbol [ upperX %upperX.13 210 20 26 ];
+        %tmp.166 = lgetv %coords.10;
+        symbol [ coords %tmp.166 210 29 35 ];
+        %tmp.167 = lgetv %i.11;
+        symbol [ i %tmp.167 210 36 37 ];
+        %tmp.168 = agetv %tmp.166 %tmp.167;
+        %tmp.169 = lgetv %dx.12;
+        symbol [ dx %tmp.169 210 42 44 ];
+        %tmp.170 = 10;
+        %tmp.171 = mul %tmp.169 %tmp.170;
+        %tmp.172 = add %tmp.168 %tmp.171;
+        lputv %upperX.13 %tmp.172;
+        symbol [ upperX %upperX.13 210 20 26 ];
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 212 16 ]
+        %tmp.173 = lgetv %dc;
+        symbol [ dc %tmp.173 212 16 18 ];
+        symbol [ fillPolygon %tmp.174 212 19 30 ];
+        %tmp.174 = getv function %tmp.173 :fillPolygon;
+        %tmp.175 = newa 4;
+        %tmp.176 = newa 2;
+        %tmp.177 = lgetv %coords.10;
+        symbol [ coords %tmp.177 212 33 39 ];
+        %tmp.178 = lgetv %i.11;
+        symbol [ i %tmp.178 212 40 41 ];
+        %tmp.179 = agetv %tmp.177 %tmp.178;
+        %tmp.180 = 1;
+        %tmp.181 = sub %tmp.179 %tmp.180;
+        %tmp.182 = dup %tmp.176;
+        %tmp.183 = aputv %tmp.182 0 %tmp.181;
+        %tmp.184 = 2;
+        %tmp.185 = dup %tmp.183;
+        %tmp.186 = aputv %tmp.185 1 %tmp.184;
+        %tmp.187 = dup %tmp.175;
+        %tmp.188 = aputv %tmp.187 0 %tmp.186;
+        %tmp.189 = newa 2;
+        %tmp.190 = lgetv %upperX.13;
+        symbol [ upperX %tmp.190 213 33 39 ];
+        %tmp.191 = 1;
+        %tmp.192 = sub %tmp.190 %tmp.191;
+        %tmp.193 = dup %tmp.189;
+        %tmp.194 = aputv %tmp.193 0 %tmp.192;
+        %tmp.195 = 12;
+        %tmp.196 = dup %tmp.194;
+        %tmp.197 = aputv %tmp.196 1 %tmp.195;
+        %tmp.198 = dup %tmp.188;
+        %tmp.199 = aputv %tmp.198 1 %tmp.197;
+        %tmp.200 = newa 2;
+        %tmp.201 = lgetv %upperX.13;
+        symbol [ upperX %tmp.201 214 33 39 ];
+        %tmp.202 = 1;
+        %tmp.203 = add %tmp.201 %tmp.202;
+        %tmp.204 = dup %tmp.200;
+        %tmp.205 = aputv %tmp.204 0 %tmp.203;
+        %tmp.206 = 12;
+        %tmp.207 = dup %tmp.205;
+        %tmp.208 = aputv %tmp.207 1 %tmp.206;
+        %tmp.209 = dup %tmp.199;
+        %tmp.210 = aputv %tmp.209 2 %tmp.208;
+        %tmp.211 = newa 2;
+        %tmp.212 = lgetv %coords.10;
+        symbol [ coords %tmp.212 215 33 39 ];
+        %tmp.213 = lgetv %i.11;
+        symbol [ i %tmp.213 215 40 41 ];
+        %tmp.214 = agetv %tmp.212 %tmp.213;
+        %tmp.215 = 1;
+        %tmp.216 = add %tmp.214 %tmp.215;
+        %tmp.217 = dup %tmp.211;
+        %tmp.218 = aputv %tmp.217 0 %tmp.216;
+        %tmp.219 = 2;
+        %tmp.220 = dup %tmp.218;
+        %tmp.221 = aputv %tmp.220 1 %tmp.219;
+        %tmp.222 = dup %tmp.210;
+        %tmp.223 = aputv %tmp.222 3 %tmp.221;
+        invoke %tmp.173 %tmp.174(%tmp.223);
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 217 16 ]
+        %tmp.224 = lgetv %dc;
+        symbol [ dc %tmp.224 217 16 18 ];
+        symbol [ fillPolygon %tmp.225 217 19 30 ];
+        %tmp.225 = getv function %tmp.224 :fillPolygon;
+        %tmp.226 = newa 4;
+        %tmp.227 = newa 2;
+        %tmp.228 = lgetv %coords.10;
+        symbol [ coords %tmp.228 217 33 39 ];
+        %tmp.229 = lgetv %i.11;
+        symbol [ i %tmp.229 217 40 41 ];
+        %tmp.230 = agetv %tmp.228 %tmp.229;
+        %tmp.231 = 1;
+        %tmp.232 = sub %tmp.230 %tmp.231;
+        %tmp.233 = dup %tmp.227;
+        %tmp.234 = aputv %tmp.233 0 %tmp.232;
+        %tmp.235 = lgetv %height.2;
+        symbol [ height %tmp.235 217 48 54 ];
+        %tmp.236 = 2;
+        %tmp.237 = sub %tmp.235 %tmp.236;
+        %tmp.238 = dup %tmp.234;
+        %tmp.239 = aputv %tmp.238 1 %tmp.237;
+        %tmp.240 = dup %tmp.226;
+        %tmp.241 = aputv %tmp.240 0 %tmp.239;
+        %tmp.242 = newa 2;
+        %tmp.243 = lgetv %upperX.13;
+        symbol [ upperX %tmp.243 218 33 39 ];
+        %tmp.244 = 1;
+        %tmp.245 = sub %tmp.243 %tmp.244;
+        %tmp.246 = dup %tmp.242;
+        %tmp.247 = aputv %tmp.246 0 %tmp.245;
+        %tmp.248 = lgetv %height.2;
+        symbol [ height %tmp.248 218 45 51 ];
+        %tmp.249 = 12;
+        %tmp.250 = sub %tmp.248 %tmp.249;
+        %tmp.251 = dup %tmp.247;
+        %tmp.252 = aputv %tmp.251 1 %tmp.250;
+        %tmp.253 = dup %tmp.241;
+        %tmp.254 = aputv %tmp.253 1 %tmp.252;
+        %tmp.255 = newa 2;
+        %tmp.256 = lgetv %upperX.13;
+        symbol [ upperX %tmp.256 219 33 39 ];
+        %tmp.257 = 1;
+        %tmp.258 = add %tmp.256 %tmp.257;
+        %tmp.259 = dup %tmp.255;
+        %tmp.260 = aputv %tmp.259 0 %tmp.258;
+        %tmp.261 = lgetv %height.2;
+        symbol [ height %tmp.261 219 45 51 ];
+        %tmp.262 = 12;
+        %tmp.263 = sub %tmp.261 %tmp.262;
+        %tmp.264 = dup %tmp.260;
+        %tmp.265 = aputv %tmp.264 1 %tmp.263;
+        %tmp.266 = dup %tmp.254;
+        %tmp.267 = aputv %tmp.266 2 %tmp.265;
+        %tmp.268 = newa 2;
+        %tmp.269 = lgetv %coords.10;
+        symbol [ coords %tmp.269 220 33 39 ];
+        %tmp.270 = lgetv %i.11;
+        symbol [ i %tmp.270 220 40 41 ];
+        %tmp.271 = agetv %tmp.269 %tmp.270;
+        %tmp.272 = 1;
+        %tmp.273 = add %tmp.271 %tmp.272;
+        %tmp.274 = dup %tmp.268;
+        %tmp.275 = aputv %tmp.274 0 %tmp.273;
+        %tmp.276 = lgetv %height.2;
+        symbol [ height %tmp.276 220 48 54 ];
+        %tmp.277 = 2;
+        %tmp.278 = sub %tmp.276 %tmp.277;
+        %tmp.279 = dup %tmp.275;
+        %tmp.280 = aputv %tmp.279 1 %tmp.278;
+        %tmp.281 = dup %tmp.267;
+        %tmp.282 = aputv %tmp.281 3 %tmp.280;
+        invoke %tmp.224 %tmp.225(%tmp.282);
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_52_221_12_stop:
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_12_221_12_for_incr:
+[ "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc" 208 ]
+        %tmp.285 = lgetv %i.11;
+        symbol [ i %tmp.285 208 47 48 ];
+        %tmp.286 = add %tmp.285 1;
+        lputv %i.11 %tmp.286;
+        symbol [ i %i.11 208 47 48 ];
+        goto @C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_12_221_12_for_test;
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_208_12_221_12_for_end:
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_206_15_222_8_stop:
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_188_8_222_8_if_end:
+C_Projects_Garmin_Bonadir_Bonadir_source_BonadirView_mc_183_53_223_4_stop:
+    }
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 228; @symbol_functiondef = [onHide,228,13,19]; ]
+    function onHide() as Void {
+    }
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 232; @symbol_functiondef = [onExitSleep,232,13,24]; ]
+    function onExitSleep() as Void {
+    }
+    [ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 236; @symbol_functiondef = [onEnterSleep,236,13,25]; ]
+    function onEnterSleep() as Void {
+    }
+}
+[ @file = "C:\Projects\Garmin\Bonadir\Bonadir\source\BonadirView.mc"; @line = 1; ]
+<init> {
+}
